@@ -33,7 +33,7 @@ extract($row1);
 
 			?>
 	
-<form action="/sms/modules/academics/print_markSheet.php" method="post" name="" id="">
+<form action="sms/modules/academics/print_markSheet.php" method="post" name="" id="">
 <p>Class: <?php echo $class_name; ?>&nbsp;&nbsp;|&nbsp;&nbsp; <?php echo $term_name.' '.$year_name; ?></p>
 <table width="100%" border="0" align="center" cellpadding="1" cellspacing="1" class="entryTable">
 <tr align="center" class="entryTableHeader">

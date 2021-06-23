@@ -134,7 +134,7 @@ extract($row6);
 </tr>
 <?php
  } 
-if (mysql_num_rows($result) > 0) {
+if (mysqli_num_rows($result) > 0) {
 	$i = 0;
 
 	while($row = mysqli_fetch_assoc($result)) {
@@ -225,7 +225,7 @@ if ($_SESSION['User_type']=="admin" || $_SESSION['User_type']=="super_admin" || 
 <?php	
 	if ($_SESSION['User_type']=="student"){ 
 	$query1= " SELECT adminNo FROM student_details WHERE concat(fname,' ',mname) like'%".$_SESSION['full_name']."%' ";
-	$result = mysql_query ($query1);
+	$result = mysqli_query($con1,$query1);
 	$nt=mysqli_fetch_assoc($result);
 	extract($nt);
 	?>		

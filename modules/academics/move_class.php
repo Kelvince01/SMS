@@ -59,7 +59,7 @@ if (isset($_POST['save'])) {
 // update student Details
 $sql="update student_details set class_id=$newclass where class_id=$currentclass and active=1";
 $row=mysqli_query($con1,$sql);// or die(mysqli_error($con1));
-$ct = mysql_affected_rows();
+$ct = mysqli_affected_rows($con1);
 if($ct > 0) {
 //header('location: /sms/index.php?view=academics&info=duplicate');
 echo'<script>alert("Moved '.$ct.' Students");window.location=" /sms/modules/admissions/students/students_list2.php"</script>';

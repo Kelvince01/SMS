@@ -58,8 +58,8 @@ $sql = "Select * FROM student_details where class_id= $classid ORDER by stud_id 
 }else{
 $sql = "Select * FROM student_details ORDER by stud_id ASC ";	
 }
-$result     = mysqli_query($con1,$sql) or die(mysqli_error($con1));
-if (mysql_num_rows($result) > 0) {
+$result = mysqli_query($con1,$sql) or die(mysqli_error($con1));
+if (mysqli_num_rows($result) > 0) {
 $i = 0;
 
 while($row = mysqli_fetch_assoc($result)) {
@@ -94,7 +94,7 @@ extract($row);
 //class name
 $query1="SELECT class_name,class_for from class where class_id='$class_id'";
 $result1=mysqli_query($con1,$query1);
-if (mysql_num_rows($result1) > 0) {
+if (mysqli_num_rows($result1) > 0) {
 $row1 = mysqli_fetch_assoc($result1);
 extract($row1);
 }
@@ -105,7 +105,7 @@ $class_name='NOT ALLOCATED';
 //get new students and chek payment status
 $sql2    = "SELECT term_id as termid  FROM paid WHERE stud_id='$stud_id'";
 $result2   = mysqli_query($con1,$sql2) or die('Cannot get Info7.');
-if (mysql_num_rows($result2) == 0) {
+if (mysqli_num_rows($result2) == 0) {
     $paidstudent ="never" ;
     $termid=""; 
 }else{
@@ -119,7 +119,7 @@ else $paidstudent ="not";
 $sql3    = "SELECT tb2.type FROM fee_periods tb1 inner join fee_types tb2 on tb1.feetype_id = tb2.feetype_id WHERE term_name='".$term_name."' and class_for='".$class_for."'";
 $result3   = mysqli_query($con1,$sql3) or die('Cannot get Info7.');
 $typearray =array();
-if (mysql_num_rows($result3) > 0) {
+if (mysqli_num_rows($result3) > 0) {
 while($row = mysqli_fetch_array($result3)) {
 $typearray[] = $row[0];
 }

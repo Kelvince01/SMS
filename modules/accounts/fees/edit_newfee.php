@@ -4,7 +4,7 @@ $id=$_GET['id'];
 extract ($_POST);	
 
 $sql = "Select fees_newstudent.*,t.term_name,t.year_name FROM  fees_newstudent inner join term_period t ON fees_newstudent.period_id =t.term_id WHERE id=$id ORDER BY  period_id ASC  ";
-$result     = mysqli_query($con1,$sql) or die(mysqli_error($con1));
+$result = mysqli_query($con1,$sql) or die(mysqli_error($con1));
 			
 while($row = mysqli_fetch_assoc($result)) {
 extract($row);

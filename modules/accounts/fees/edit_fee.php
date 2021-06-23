@@ -33,7 +33,7 @@ $result     = mysqli_query($con1,$sql) or die(mysqli_error($con1));
 </tr>
 <?php
  } 
-if (mysql_num_rows($result) > 0) {
+if (mysqli_num_rows($result) > 0) {
 	$i = 0;
 
 	while($row = mysqli_fetch_assoc($result)) {

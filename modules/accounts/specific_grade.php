@@ -73,7 +73,7 @@ $i = 0;
 
 while($row = mysqli_fetch_assoc($result)) {
 extract($row);
-$now=$capacity-($girls+boys);
+$now=$capacity-($girls+$boys);
 if ($i%2) {
 	$class = 'row1';
 } else {
