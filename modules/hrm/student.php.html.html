@@ -1,0 +1,421 @@
+Access denied for user ''@'localhost' (using password: NO)
+Warning: include(/sms/connection/connect.php): failed to open stream: No such file or directory in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 3
+
+Call Stack:
+    0.0015     354952   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+
+
+Warning: include(): Failed opening '/sms/connection/connect.php' for inclusion (include_path='.;C:\php\pear') in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 3
+
+Call Stack:
+    0.0015     354952   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>mySkulMate::Admissions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen" />
+<link type="text/css" href="/sms/datepicker/all.css" rel="stylesheet" />
+<script src="../validation/scriptaculous/lib/prototype.js" type="text/javascript"></script>
+<script src="../validation/scriptaculous/src/effects.js" type="text/javascript"></script>
+<script type="text/javascript" src="../validation/fabtabulous.js"></script>
+<script type="text/javascript" src="../validation/validation.js"></script>
+<script type="text/javascript" src="/sms/datepicker/jquery.js"></script>
+<script type="text/javascript" src="/sms/datepicker/core.js"></script>
+<script type="text/javascript" src="/sms/datepicker/datepicker.js"></script>
+<link rel="stylesheet" href="/sms/modules/admissions/jquery/development-bundle/themes/base/jquery.ui.all.css">
+	<script src="/sms/modules/admissions/jquery/development-bundle/jquery-1.5.1.js"></script>
+	<script src="/sms/modules/admissions/jquery/development-bundle/ui/jquery.ui.core.js"></script>
+	<script src="/sms/modules/admissions/jquery/development-bundle/ui/jquery.ui.widget.js"></script>
+	<script src="/sms/modules/admissions/jquery/development-bundle/ui/jquery.ui.tabs.js"></script>
+	
+	<script>
+	$(function() {
+		$( "#tabs" ).tabs();
+	});
+	</script>
+</head>
+<body>
+<div id="wrap">
+
+<div id="top"> </div>
+<div id="contentt">
+<div id="logo" align="center">
+<img src="/sms/images/logo.png"/>
+
+</div>
+<!-- end header -->
+<div class="left">
+		 
+Warning: include(../user_menu.php): failed to open stream: No such file or directory in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 50
+
+Call Stack:
+    0.0015     354952   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+
+
+Warning: include(): Failed opening '../user_menu.php' for inclusion (include_path='.;C:\php\pear') in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 50
+
+Call Stack:
+    0.0015     354952   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+
+	</div>
+
+
+<div class="middle">
+<div class="demo">
+
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Record Student Details</a></li>
+		<li><a href="#tabs-2">Allocate Class</a></li>
+		<li><a href="#tabs-3">Allocate Subjects</a></li>
+		<li><a href="#tabs-1">Allocate Hostel/Dorm</a></li>
+		<li><a href="#tabs-2">Allocate Duties</a></li>
+		
+	</ul>
+		<div id="tabs-1" align="center">
+		<p> <h2 class="title">Record Student Details</h2>
+			
+			
+			<form action="receipts/produce_receipt.php" method="post" name="frmProduce" id="frmProduce">
+    <table width="550" border="0" align="center" cellpadding="5" cellspacing="1" class="entryTable">
+        <tr class="entryTableHeader"> 
+            <td colspan="2">Student Demograhic Details</td>
+        </tr>
+		<tr> 
+            <td width="150" class="label">Surname</td>
+            <td class="content"><input name="surname" type="text" class="box" value = "" id="surname" size="30" maxlength="50" class="required validate-alpha" title="Enter your name"></td>
+        </tr>
+		
+		        <tr> 
+            <td width="150" class="label">Middle Name</td>
+            <td class="content"><input name="othername" type="text" class="box" value = "" id="othername" size="30" maxlength="50"><span class="required" title="This field is required.">*</span></td>
+        </tr>
+
+			<tr> 
+            <td width="150" class="label">Last Name</td>
+            <td class="content"><input name="kin" type="text" class="box" value = "" id="kin" size="30" maxlength="50"><span class="required" title="This field is required.">*</span></td>
+        </tr>      
+			<tr> 
+            <td width="150" class="label">Other Names</td>
+            <td class="content"><input name="nationalid" type="text" class="box" value = "" id="nationalid" size="30" maxlength="50"><span class="required" title="This field is required.">*</span></td>
+        </tr>  	
+		<tr> 
+            <td width="150" class="label">Gender</td>
+			<td><select name="cboView" class="box" id="cboView">
+			 <option value="" selected>-.- Select -.-</option>
+			<option value="product">Male</option>
+			<option value="category">Female</option>
+		   </select></td>
+						</tr> 
+        <tr> 
+            <td width="150" class="label">Date of Birth</td>
+            <td class="content"><input name="nationalid" type="text" class="box" value = "" id="nationalid" size="30" maxlength="50"><span class="required" title="This field is required.">*</span></td>
+        </tr>  
+       <tr> 
+            <td width="150" class="label">Ethnicity</td>
+            <td class="content"><input name="nationalid" type="text" class="box" value = "" id="nationalid" size="30" maxlength="50"><span class="required" title="This field is required.">*</span></td>
+        </tr>	
+		<tr> 
+            <td width="150" class="label">Family Status</td>
+			<td><select name="cboView" class="box" id="cboView">
+			 <option value="" selected>-.- Select -.-</option>
+			<option value="product">Single Parent</option>
+			<option value="category">Both Parents Alive</option>
+			<option value="category">Orphaned</option>
+		   </select></td>
+             </tr>
+			 <tr> 
+            <td width="150" class="label">Passport Photo</td>
+            <td class="content"><input name="fleImage" type="file" class="box" value = "" size="30" maxlength="50"><span class="required" title="This field is required.">*</span></td>
+        </tr>
+        <tr class="entryTableHeader"> 
+            <td colspan="2">Parents/Guardian Demographic Details</td>
+        </tr>		
+		<tr> 
+            <td width="150" class="label">Surname</td>
+            <td class="content"><input name="shares" type="text" class="box" value = "" onKeyUp="checkNumber(this);" id="shares" size="30" maxlength="50"><span class="required" title="This field is required.">*</span></td>
+        </tr>
+		<tr> 
+            <td width="150" class="label">Middle Name</td>
+            <td class="content"><input name="shares" type="text" class="box" value = "" onKeyUp="checkNumber(this);" id="shares" size="30" maxlength="50"><span class="required" title="This field is required.">*</span></td>
+        </tr>
+		<tr> 
+            <td width="150" class="label">Last Name</td>
+            <td class="content"><input name="shares" type="text" class="box" value = "" onKeyUp="checkNumber(this);" id="shares" size="30" maxlength="50"><span class="required" title="This field is required.">*</span></td>
+        </tr>
+		<tr> 
+            <td width="150" class="label">Other Names</td>
+            <td class="content"><input name="shares" type="text" class="box" value = "" onKeyUp="checkNumber(this);" id="shares" size="30" maxlength="50"><span class="required" title="This field is required.">*</span></td>
+        </tr>
+		<tr> 
+            <td width="150" class="label">Marital Status</td>
+			<td><select name="cboView" class="box" id="cboView">
+			 <option value="" selected>-.- Select -.-</option>
+			<option value="product">Single</option>
+			<option value="category">Married</option>
+			<option value="category">Divorced</option>
+		   </select></td>
+             </tr>
+		<tr> 
+            <td width="150" class="label">Spouse Name</td>
+            <td class="content"><input name="nationalid" type="text" class="box" value = "" id="nationalid" size="30" maxlength="50"><span class="required" title="This field is required.">*</span></td>
+        </tr>
+		<tr> 
+            <td width="150" class="label">Occupation</td>
+            <td class="content"><input name="nationalid" type="text" class="box" value = "" id="nationalid" size="30" maxlength="50"><span class="required" title="This field is required.">*</span></td>
+        </tr>
+		<tr> 
+            <td width="150" class="label">Spouse Occupation</td>
+            <td class="content"><input name="nationalid" type="text" class="box" value = "" id="nationalid" size="30" maxlength="50"><span class="required" title="This field is required.">*</span></td>
+        </tr>
+		<tr class="entryTableHeader"> 
+            <td colspan="2">Parents/Guardian Contact Details</td>
+        </tr>
+        <tr> 
+            <td width="150" class="label">Phone No</td>
+            <td class="content"><input name="nationalid" type="text" class="box" value = "" id="nationalid" size="30" maxlength="50"><span class="required" title="This field is required.">*</span></td>
+        </tr>	
+       <tr> 
+            <td width="150" class="label">Poastal Address</td>
+            <td class="content"><input name="nationalid" type="text" class="box" value = "" id="nationalid" size="30" maxlength="50"><span class="required" title="This field is required.">*</span></td>
+        </tr>
+		       <tr> 
+            <td width="150" class="label">Email Address</td>
+            <td class="content"><input name="nationalid" type="text" class="box" value = "" id="nationalid" size="30" maxlength="50"><span class="required" title="This field is required.">*</span></td>
+        </tr>
+
+		<tr> 
+            <td width="150" class="label">Area of Residence</td>
+            <td class="content"><input name="nationalid" type="text" class="box" value = "" id="nationalid" size="30" maxlength="50"><span class="required" title="This field is required.">*</span></td>
+        </tr>
+        <tr> 
+            <td width="150" class="label">Preffered Contact Method</td>
+			<td><select name="cboView" class="box" id="cboView">
+			 <option value="" selected>-.- Select -.-</option>
+			<option value="product">SMS</option>
+			<option value="category">Email</option>
+			<option value="category">Poastal Letter</option>
+		   </select></td>
+             </tr>	
+			 <tr class="entryTableHeader"> 
+            <td colspan="2">Student Medical Details</td>
+        </tr>
+         <tr> 
+            <td width="150" class="label">Medical Condition</td>
+            <td class="content"><input name="nationalid" type="text" class="box" value = "" id="nationalid" size="30" maxlength="50"><span class="required" title="This field is required.">*</span></td>
+        </tr>		
+		 <tr> 
+            <td width="150" class="label">Special Diet</td>
+			<td><select name="cboView" class="box" id="cboView">
+			 <option value="" selected>-.- Select -.-</option>
+			<option value="product">Yes</option>
+			<option value="category">No</option>
+		   </select></td>
+            </tr>	
+        <tr class="entryTableHeader"> 
+            <td colspan="2">System Parameters</td>
+        </tr>
+        <tr> 
+            <td width="150" class="label">Student AdmNo</td>
+            <td class="content"><input name="nationalid" type="text" class="box" value = "" id="nationalid" size="30" maxlength="50"><span class="required" title="This field is required.">*</span></td>
+        </tr>
+          <tr> 
+            <td width="150" class="label">Student Active</td>
+			<td><select name="cboView" class="box" id="cboView">
+			 <option value="" selected>-.- Select -.-</option>
+			<option value="product">Yes</option>
+			<option value="category">No</option>
+		   </select></td>
+            </tr>	
+        <tr> 
+            <td width="150" class="label">Student Status</td>
+			<td><select name="cboView" class="box" id="cboView">
+			 <option value="" selected>-.- Select -.-</option>
+			<option value="product">Fresh Admission</option>
+			<option value="category">Transfer</option>
+			<option value="category">Re-admission after Suspension</option>
+			<option value="category">Re-admission after Expulsion</option>
+			
+		   </select></td>
+                </tr>			
+        <tr> 
+		<td width="150" class="label"></td>
+            <td class="content"><label >Fields Marked with<span class="required" title="This field is required.">*</span> are required.</td>
+        </tr>
+		<tr>
+		<td height="43">&nbsp;</td>
+		<td>
+		<p align="left"> 
+        <input name="save" type="submit" id="save" value="Save">
+    </p>
+	</td>
+	</tr>
+    </table> 
+	
+ <p>&nbsp;</p>
+    
+</form></p>
+	</div>
+	
+	<div id="tabs-2">
+	<p> <h2 class="title">Allocate Student A Class</h2>
+			
+			
+			<form action="receipts/produce_receipt.php" method="post" name="frmProduce" id="frmProduce">
+    <table width="550" border="0" align="center" cellpadding="5" cellspacing="1" class="entryTable">
+        <tr class="entryTableHeader"> 
+            <td colspan="2">Class Allocation</td>
+        </tr>
+		<tr> 
+            <td width="150" class="label">Student</td>
+			<td><select name="cboView" class="box" id="cboView">
+			
+Warning: mysqli_query($con1,): Access denied for user ''@'localhost' (using password: NO) in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 267
+
+Call Stack:
+    0.0015     354952   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+    0.0102     355760   2. mysqli_query($con1,) C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:267
+
+
+Warning: mysqli_query($con1,): A link to the server could not be established in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 267
+
+Call Stack:
+    0.0015     354952   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+    0.0102     355760   2. mysqli_query($con1,) C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:267
+
+
+Warning: mysqli_fetch_array() expects parameter 1 to be resource, boolean given in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 270
+
+Call Stack:
+    0.0015     354952   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+    0.3023     356152   2. mysqli_fetch_array() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:270
+
+		   </select></td>
+						</tr> 
+						<tr> 
+            <td width="150" class="label">Allocate Class</td>
+			<td><select name="cboView" class="box" id="cboView">
+			
+Warning: mysqli_query($con1,): Access denied for user ''@'localhost' (using password: NO) in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 288
+
+Call Stack:
+    0.0015     354952   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+    0.3025     356232   2. mysqli_query($con1,) C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:288
+
+
+Warning: mysqli_query($con1,): A link to the server could not be established in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 288
+
+Call Stack:
+    0.0015     354952   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+    0.3025     356232   2. mysqli_query($con1,) C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:288
+
+
+Warning: mysqli_fetch_array() expects parameter 1 to be resource, boolean given in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 291
+
+Call Stack:
+    0.0015     354952   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+    0.3214     356224   2. mysqli_fetch_array() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:291
+
+		   </select></td>
+						</tr> 
+       
+        <tr> 
+		<td width="150" class="label"></td>
+            <td class="content"><label >Fields Marked with<span class="required" title="This field is required.">*</span> are required.</td>
+        </tr>
+		<tr>
+		<td height="43">&nbsp;</td>
+		<td>
+		<p align="left"> 
+        <input name="save" type="submit" id="save" value="Save">
+    </p>
+	</td>
+	</tr>
+    </table> 
+	
+ <p>&nbsp;</p>
+    
+</form></p>
+		</div>
+	<div id="tabs-3">
+	
+Warning: include(/sms/connection/connect.php): failed to open stream: No such file or directory in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 324
+
+Call Stack:
+    0.0015     354952   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+
+
+Warning: include(): Failed opening '/sms/connection/connect.php' for inclusion (include_path='.;C:\php\pear') in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 324
+
+Call Stack:
+    0.0015     354952   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+
+PHP Warning:  include(/sms/connection/connect.php): failed to open stream: No such file or directory in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 3
+PHP Stack trace:
+PHP   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+PHP Warning:  include(): Failed opening '/sms/connection/connect.php' for inclusion (include_path='.;C:\php\pear') in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 3
+PHP Stack trace:
+PHP   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+PHP Warning:  include(../user_menu.php): failed to open stream: No such file or directory in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 50
+PHP Stack trace:
+PHP   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+PHP Warning:  include(): Failed opening '../user_menu.php' for inclusion (include_path='.;C:\php\pear') in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 50
+PHP Stack trace:
+PHP   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+PHP Warning:  mysqli_query($con1,): Access denied for user ''@'localhost' (using password: NO) in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 267
+PHP Stack trace:
+PHP   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+PHP   2. mysqli_query($con1,) C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:267
+PHP Warning:  mysqli_query($con1,): A link to the server could not be established in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 267
+PHP Stack trace:
+PHP   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+PHP   2. mysqli_query($con1,) C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:267
+PHP Warning:  mysqli_fetch_array() expects parameter 1 to be resource, boolean given in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 270
+PHP Stack trace:
+PHP   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+PHP   2. mysqli_fetch_array() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:270
+PHP Warning:  mysqli_query($con1,): Access denied for user ''@'localhost' (using password: NO) in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 288
+PHP Stack trace:
+PHP   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+PHP   2. mysqli_query($con1,) C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:288
+PHP Warning:  mysqli_query($con1,): A link to the server could not be established in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 288
+PHP Stack trace:
+PHP   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+PHP   2. mysqli_query($con1,) C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:288
+PHP Warning:  mysqli_fetch_array() expects parameter 1 to be resource, boolean given in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 291
+PHP Stack trace:
+PHP   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+PHP   2. mysqli_fetch_array() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:291
+PHP Warning:  include(/sms/connection/connect.php): failed to open stream: No such file or directory in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 324
+PHP Stack trace:
+PHP   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+PHP Warning:  include(): Failed opening '/sms/connection/connect.php' for inclusion (include_path='.;C:\php\pear') in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 324
+PHP Stack trace:
+PHP   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+PHP Warning:  mysqli_query($con1,): Access denied for user ''@'localhost' (using password: NO) in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 326
+PHP Stack trace:
+PHP   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+
+PHP   2. mysqli_query($con1,) C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:326
+PHP Warning:  mysqli_query($con1,): A link to the server could not be established in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 326
+PHP Stack trace:
+PHP   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+Warning: mysqli_query($con1,): Access denied for user ''@'localhost' (using password: NO) in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 326
+PHP   2. mysqli_query($con1,) C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:326
+
+Call Stack:
+    0.0015     354952   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+    0.3231     356416   2. mysqli_query($con1,) C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:326
+
+
+Warning: mysqli_query($con1,): A link to the server could not be established in C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php on line 326
+
+Call Stack:
+    0.0015     354952   1. {main}() C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:0
+    0.3231     356416   2. mysqli_query($con1,) C:\Zend\Apache2\htdocs\sms\modules\admissions\students\student.php:326
+
+Access denied for user ''@'localhost' (using password: NO)

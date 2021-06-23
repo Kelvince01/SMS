@@ -1,0 +1,31 @@
+
+#content {
+font:13px Arial, Verdana, Tahoma, sans-serif;
+}
+#content2 {
+font:14px Arial, Verdana, Tahoma, sans-serif;
+}
+img {border: none;}
+
+#coop_title
+{
+font: bold 16px Verdana, 'Trebuchet MS', Sans-serif;
+}
+ .entryTable {
+	background-color: #EFEFEF;
+}
+
+.content {
+	background-color: #FFFFFF;
+	line-height: 30px;
+}
+
+.line{
+border-top:1px solid #000000;
+margin-left:25%;
+margin-right:25%;
+}
+
+.left_margin{
+padding-left:130px;
+}

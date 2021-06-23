@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+		<script src="scriptaculous/lib/prototype.js" type="text/javascript"></script>
+		<script src="scriptaculous/src/effects.js" type="text/javascript"></script>
+		<script type="text/javascript" src="fabtabulous.js"></script>
+		<script type="text/javascript" src="validation.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+		<div id="container">
+			<p></a></p>
+			<h1>Student Registration</h1>
+			<div id="mainmenu">
+					<ul id="tabs">
+						<li>
+							<a href="#standard">Student Details</a>
+						</li>
+						<li>
+							<a href="#using-titles">Parents/Gurdian Details</a>
+						</li>
+						<li>
+							<a href="#parent_contact">Parents/Gurdian Contacts</a>
+						</li>
+						<li>
+							<a href="#medical_details">Medical Information</a>
+						</li>
+
+						<li>
+							<a href="#student_status">Student Status</a>
+						</li>
+						
+					</ul>
+				<div>
+				<div class="bar">&nbsp;</div>
+				<div class="panel" id="standard">
+					<form id="test" action="#" method="get">
+					<fieldset>
+						<legend>Student Demographic Details</legend>
+						<div class="form-row">
+							<div class="field-label"><label for="sname">Surname</label>:</div>
+							<div class="field-widget"><input type="text" name="sname" id="sname" class="required validate-alpha" title="Enter Surname" /></div>
+						</div>
+						<div class="form-row">
+							<div class="field-label"><label for="mname">Middle Name</label>:</div>
+							<div class="field-widget"><input type="text" name="mname" id="mname" class="validate-alpha" title="Enter Middle Name" />(optional)</div>
+						</div>
+						<div class="form-row">
+							<div class="field-label"><label for="lname">Last Name</label>:</div>
+							<div class="field-widget"><input type="text" name="lname" id="lname" class="required validate-alpha " title="Enter the Last Name" /></div>
+						</div>
+						
+						<div class="form-row">
+							<div class="field-label"><label for="others">Other Names</label>:</div>
+							<div class="field-widget"><input name="others" id="others" class="validate-alpha" title="Enter Other Names" />(optional)</div>		
+							</div>
+					
+						
+						
+						<div class="form-row">
+							<div class="field-label"><label for="field4">Ethnicity</label>:</div>
+							<div class="field-widget"><input name="field4" id="field4" class="validate-number" title="Optional: Enter your age" /> (optional)</div>
+						</div>
+						<div class="form-row">
+							<div class="field-label"><label for="field6">Gender</label>:</div>
+							<div class="field-label">
+								<input type="radio" name="field6" id="field6-male" value="Male" />Male<br />
+								<input type="radio" name="field6" id="field6-female" value="Female" class="validate-one-required" />Female
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="field-label"><label for="field7">Family Status</label>:</div>
+							<div class="field-widget">
+								<select id="field7" name="field7" class="validate-selection" title="Choose your department">
+									<option value=""=>Select one...</option>
+									<option value="single">Single Parent</option>
+									<option value="both_alive">Both Parents Alive</option>
+									<option value="orphaned">Orphaned</option>
+															
+								</select>
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="field-label"><label for="field9">PassPort Photo</label>:</div>
+							<div class="field-widget"><input  type="file" name="field9" id="field9" class="required validate-password-confirm" title="Enter the same password for confirmation" /></div>
+						</div>
+						</form>
+					<script type="text/javascript">
+						function formCallback(result, form) {
+							window.status = "valiation callback for form '" + form.id + "': result = " + result;
+						}
+						
+						var valid = new Validation('test', {immediate : true, onFormValidate : formCallback});
+						Validation.addAllThese([
+							['validate-password', 'Your password must be more than 6 characters and not be \'password\' or the same as your name', {
+								minLength : 7,
+								notOneOf : ['password','PASSWORD','1234567','0123456'],
+								notEqualToField : 'field1'
+							}],
+							['validate-password-confirm', 'Your confirmation password does not match your first password, please try again.', {
+								equalToField : 'field8'
+							}]
+						]);
+					</script>
+				</div>
+				<div class="panel" id="using-titles">
+					<form id="test2" action="#" method="get">
+						<fieldset>
+							<legend>Parent/Gurdian Details</legend>
+							<div class="form-row">
+								<div class="field-label"><label for="field1-t2">Surname</label>:</div>
+								<div class="field-widget"><input name="field1-t2" id="field1-t2" class="required" title="Enter your name. This is a required field" /></div>
+							</div>
+							<div class="form-row">
+								<div class="field-label"><label for="field1-t2">Middle Name</label>:</div>
+								<div class="field-widget"><input name="field1-t2" id="field1-t2" class="required" title="Enter your name. This is a required field" /></div>
+							</div>
+							<div class="form-row">
+								<div class="field-label"><label for="field1-t2">Last Name</label>:</div>
+								<div class="field-widget"><input name="field1-t2" id="field1-t2" class="required" title="Enter your name. This is a required field" /></div>
+							</div>
+							<div class="form-row">
+								<div class="field-label"><label for="field1-t2">Other Name</label>:</div>
+								<div class="field-widget"><input name="field1-t2" id="field1-t2" class="required" title="Enter your name. This is a required field" /></div>
+							</div>
+							<div class="form-row">
+							<div class="field-label"><label for="field7">Marital Status</label>:</div>
+							<div class="field-widget">
+								<select id="field7" name="field7" class="validate-selection" title="Choose your department">
+									<option value=""=>Select one...</option>
+									<option value="single">Single</option>
+									<option value="married">Married</option>
+									<option value="divorced">Divorced</option>
+																					
+								</select>
+							</div>
+						</div>
+						<div class="form-row">
+								<div class="field-label"><label for="field1-t2">Spouse Name</label>:</div>
+								<div class="field-widget"><input name="field1-t2" id="field1-t2" class="required" title="Enter your name. This is a required field" /></div>
+							</div>
+							<div class="form-row">
+								<div class="field-label"><label for="field1-t2">Occupation</label>:</div>
+								<div class="field-widget"><input name="field1-t2" id="field1-t2" class="required" title="Enter your name. This is a required field" /></div>
+							</div>
+							<div class="form-row">
+								<div class="field-label"><label for="field1-t2">Spouse Occupation</label>:</div>
+								<div class="field-widget"><input name="field1-t2" id="field1-t2" class="required" title="Enter your name. This is a required field" /></div>
+							</div>
+							</form>
+					<script type="text/javascript">
+						var valid2 = new Validation('test2', {useTitles:true});
+					</script>
+				</div>
+				<div class="panel" id="parent_contact">
+					<form id="test2" action="#" method="get">
+						<fieldset>
+							<legend>Parent/Gurdian Contact Details</legend>
+							<div class="form-row">
+								<div class="field-label"><label for="field1-t2">Phone No</label>:</div>
+								<div class="field-widget"><input name="field1-t2" id="field1-t2" class="required" title="Enter your name. This is a required field" /></div>
+							</div>
+							<div class="form-row">
+								<div class="field-label"><label for="field1-t2">Poastal Address</label>:</div>
+								<div class="field-widget"><input name="field1-t2" id="field1-t2" class="required" title="Enter your name. This is a required field" /></div>
+							</div>
+							<div class="form-row">
+								<div class="field-label"><label for="field1-t2">Email Address</label>:</div>
+								<div class="field-widget"><input name="field1-t2" id="field1-t2" class="required" title="Enter your name. This is a required field" /></div>
+							</div>
+							<div class="form-row">
+								<div class="field-label"><label for="field1-t2">Area Of Residence</label>:</div>
+								<div class="field-widget"><input name="field1-t2" id="field1-t2" class="required" title="Enter your name. This is a required field" /></div>
+							</div>
+							<div class="form-row">
+							<div class="field-label"><label for="field7">Preffered Contact Method</label>:</div>
+							<div class="field-widget">
+								<select id="field7" name="field7" class="validate-selection" title="Choose your department">
+									<option value=""=>Select one...</option>
+									<option value="product">SMS</option>
+									<option value="category">Email</option>
+									<option value="category">Poastal Letter</option>
+																					
+								</select>
+							</div>
+						</div>
+						<div class="form-row">
+								<div class="field-label"><label for="field1-t2">Spouse Name</label>:</div>
+								<div class="field-widget"><input name="field1-t2" id="field1-t2" class="required" title="Enter your name. This is a required field" /></div>
+							</div>
+							<div class="form-row">
+								<div class="field-label"><label for="field1-t2">Occupation</label>:</div>
+								<div class="field-widget"><input name="field1-t2" id="field1-t2" class="required" title="Enter your name. This is a required field" /></div>
+							</div>
+							<div class="form-row">
+								<div class="field-label"><label for="field1-t2">Spouse Occupation</label>:</div>
+								<div class="field-widget"><input name="field1-t2" id="field1-t2" class="required" title="Enter your name. This is a required field" /></div>
+							</div>
+							</form>
+					<script type="text/javascript">
+						var valid2 = new Validation('test2', {useTitles:true});
+					</script>
+				</div>
+				<div class="panel" id="medical_details">
+					<form id="test2" action="#" method="get">
+						<fieldset>
+							<legend>Student Medical Details</legend>
+							<div class="form-row">
+								<div class="field-label"><label for="field1-t2">Medical </label>:</div>
+								<div class="field-widget"><input name="field1-t2" id="field1-t2" class="required" title="Enter your name. This is a required field" /></div>
+							</div>
+							
+							<div class="form-row">
+							<div class="field-label"><label for="field7">On Special Diet</label>:</div>
+							<div class="field-widget">
+								<select id="field7" name="field7" class="validate-selection" title="Choose your department">
+									<option value="">Select one...</option>
+									<option value="product">YES</option>
+									<option value="category">NO</option>
+									
+																					
+								</select>
+							</div>
+						</div>
+						</form>
+					<script type="text/javascript">
+						var valid2 = new Validation('test2', {useTitles:true});
+					</script>
+				</div>
+				<div class="panel" id="student_status">
+					<form id="test3" action="#" method="get">
+						<fieldset>
+							<legend>Student Status</legend>
+							<div class="form-row">
+							<div class="field-label"><label for="field7">Student Admission Status</label>:</div>
+							<div class="field-widget">	
+							<select id="field7" name="field7" class="validate-selection" title="Choose your department">
+									<option value="">Select one...</option>
+									<option value="product">Fresh Admission</option>
+									<option value="category">Transfer</option>
+									<option value="category">Re-admission after Suspension</option>
+									<option value="category">Re-admission after Expulsion</option>
+									
+																					
+								</select>
+							</div>
+							</div>
+						</fieldset>
+						<input type="submit" value="Submit" /> <input type="button" value="Reset" onclick="valid3.reset(); return false" />
+					</form>
+					<script type="text/javascript">
+						var valid3 = new Validation('test3');
+					</script>
+				</div>
+		</div>
+		<script type="text/javascript">
+			new Fabtabs('tabs');
+		</script>
+	</body>
+</html>

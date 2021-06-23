@@ -1,0 +1,150 @@
+#clear{
+clear:both;
+}
+.clear{
+clear:both;
+}
+.rece-top-cont{
+ width:98%;
+ margin:0px auto;
+ height:auto;
+ margin-bottom:10px;
+}
+
+/*
+.rece-col1 , .rece-col2 , .rece-col3{
+float:left;
+min-height:100px;
+}
+.rece-col1 , .rece-col3 {
+margin-top:3px;
+font-size:13px;
+line-height:17px;
+font-weight:bold;
+text-transform:uppercase;
+font-family : Lucida Sans Unicode,lucida grande,tahoma,verdana,arial,sans-serif;
+}
+
+
+.rece-col1{
+width:30%;
+}
+.rece-col2{
+width:40%;
+ height:118px;
+background-image: url("../../../../school_logo.jpg");
+background-repeat: no-repeat;
+background-position: top left; 
+}
+.rece-col3{
+width:30%;
+}
+.rece-col1 p{
+text-align:right;
+}
+.rece-col2 h3{
+text-align:center;
+}
+.rece-col3 p{
+text-align:left;
+}
+*/
+.head_s{
+font-size:14px;
+}
+.hr{
+height:1.5px;
+border:1px solid black;
+}
+.rece-mid1-cont{
+width:100%;
+margin:0px auto;
+font-weight:bold;
+font-family: Arial,Helmet,Freesans,sans-serif;
+}
+.rece-mid1-left{
+float:left;
+width:60%;
+}
+.rece-mid1-right{
+float:right;
+}
+.rc-mid-tb{
+font-size:15px;
+width:100%;
+text-transform:upercase;
+}
+.rc-mid-tb label{
+font-weight:bold;
+}
+.rece-mid2-cont{
+width:100%;
+margin:0px auto;
+margin-top:20px;
+border-top:1px dashed #000;
+border-bottom:1px dashed #000;
+}
+.table-fee-det{
+width:100%;
+margin:0px auto;
+}
+.table-fee-det h4{
+text-transform:upercase;
+text-decoration:underline;
+}
+.table-fee-det label{
+font-weight:bold;
+}
+.table-fee-det tr td{
+padding:3px 2px;
+text-transform:upercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********* ZA MATO ******/
+/*
+.Tablenoborder{
+display: table;
+width: 100%;
+}
+.Table{
+display: table;
+width: 100%;
+border: solid;
+border-width: thin;
+}
+.Title{
+display: table-caption;
+text-align: center;
+font-weight: bold;
+font-size: larger;
+}
+.Heading{
+display: table-row;
+font-weight: bold;
+text-align: center;
+}
+.Row{
+display: table-row;
+}
+.Cell{
+display: table-cell;
+padding-left: 2px;
+padding-right: 2px;
+}
+*/

@@ -1,0 +1,50 @@
+<?php
+session_start();
+//get info
+$receipt=$_SESSION['receipt'];	
+$sales_runtime_code=$_SESSION['sales_runtime_code'];
+$totalAmount=$_SESSION['totalAmount'];
+$date=date('Y-m-d');
+$status=$_POST['goods_collected'];
+
+//if no receipt generate receiptNo
+if ($receipt=='NO'){
+
+$possible = '123456789BCDEFGHJKMNPQRSTVWXYZ';
+		$code = '';
+		$i = 0;
+		
+		while ($i < 5) { 
+			$code .= substr($possible, mt_rand(0, strlen($possible)-1), 1);
+			$i++;
+		}
+}
+//else if receipt already exists
+else{
+$code=$_SESSION['receiptNo'];
+}
+//record receipt details
+$query="INSERT INTO receipts (rctpID,receiptNo,date_sold,sales_runtime_code,amount,collected) VALUES ('NULL','$code','$date','$sales_runtime_code','$totalAmount','$status')";
+mysql_query($query) or die ('error updating database');
+//log action
+$date=date('Y-m-d: H:i');
+$userName=$_SESSION['userName'];
+$query="INSERT INTO log (logID,logTime,user,event,event_type) VALUES ('NULL','$date','$userName','Issued a receipt','INSERT')";
+$result=mysql_query($query);
+//update sales to processed
+$query="UPDATE sales SET status='processed' WHERE status='pending'";
+mysql_query($query) or die ('error updating database,check your inputs');
+//log action
+$date=date('Y-m-d: H:i');
+$userName=$_SESSION['userName'];
+$query="INSERT INTO log (logID,logTime,user,event,event_type) VALUES ('NULL','$date','$userName','Made a sale','UPDATE')";
+$result=mysql_query($query);
+//give message
+?>
+<p><br><br><br><br></p>
+<p align="center"class='alert'>Receipt Book updated Successfully.</p><br>
+<p align="center">  
+  &nbsp;&nbsp;<input name="btnCancel" type="button" id="btnCancel" value="Sell Again" onClick="window.location.href='/E-Shop/modules/stock/';" class="box">  
+
+ </p> 
+

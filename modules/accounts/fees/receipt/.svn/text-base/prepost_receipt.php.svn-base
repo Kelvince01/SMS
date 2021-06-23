@@ -1,0 +1,25 @@
+<?php
+session_start();
+if (isset($_GET['receipt']) && $_GET['receipt'] !='') {
+	$receipt = $_GET['receipt'];
+	$_SESSION['receipt']=$receipt;
+	} else {
+	// redirect to prepare receipt
+	header('Location: /E-Shop/modules/receipt/receipt.php?receipt=YES');
+}
+//Has the goos been collected or not
+?>
+<form action="/E-Shop/modules/receipt/index.php?view=post_receipt_process" method="post" enctype="multipart/form-data" name="" id="" onsubmit="return checkform(this);">
+ <p align="center" class="formTitle">Post Receipt Details</p>
+ 
+ <table class="aatable" width="30%" border="0" align="center" cellpadding="0">
+ <tr> 
+   <td width="75" class="UILabel">Goods Status</td>
+         <td><select name="goods_collected">
+         <option value="collected">Collected</option>
+        <option value="not_collected">Not Collected</option>
+		 </select></td></tr></table>
+       <p align="center"> 
+ <input type="submit" name="submit" value="Submit">
+   </p>
+</form>

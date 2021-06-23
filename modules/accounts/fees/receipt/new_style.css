@@ -1,0 +1,313 @@
+
+/* CSS Document */
+body,td,th {
+  font-family: Lucida Sans Unicode, Lucida Grande, Verdana, Sans-Serif;
+  font-size: 8pt;
+}
+body {
+    margin: 0;
+}
+/* page properties */
+@page {
+    /* dimensions for the whole page */
+    size: A5;
+    
+    margin: 0;
+}
+
+.page {
+  font-family: Lucida Sans Unicode, Lucida Grande, Verdana, Sans-Serif;
+  font-size: 8pt;
+}
+
+BR.pagey {page-break-after: always}
+/* navi_bar */
+.nav_bar { 
+padding:5px;
+background-color:#CBC8DF;
+height:16px;
+}
+
+/* blue color */
+.blue {
+color:#6699CC;
+}
+
+/* table maintenance */
+.div_60{
+border:1px solid #000000;
+padding:5px;
+width:60%;
+height: inherit;
+margin-bottom:10px;
+}
+
+.div_80{
+border:1px solid #000000;
+padding:5px;
+width:80%;
+height: inherit;
+margin-bottom:10px;
+}
+
+.div_pad{
+padding:5px;
+width:100%;
+}
+/* end table maintennace */
+
+/* Menu */
+.menu_inc{
+height:inherit;
+background-color: #CBC8DF;
+width:100%;
+}
+
+.menu_item{
+padding:4px;
+}
+
+.menu_item_main{
+padding:5px;
+color:#000000;
+}
+
+.menu_case{
+height:30px;
+border: 1px solid  #000000;
+width:100%;
+}
+
+.menu_str{
+  padding:4px;
+  color: #ffffff;
+  text-decoration: none; 
+  background-color: #FF9966;
+  height: 15px; 
+  width: inherit;
+  border: 1px solid #F4F4F4;
+  margin-left:1px;
+  float:left;
+}
+
+a.menu_str:visited { 
+background-color: #909900;
+  color: #FFFFFF;
+    font-family: Lucida Sans Unicode, Lucida Grande, Verdana, Sans-Serif;
+    font-size: 8pt;
+    font-weight: bold;
+}
+/* end Menu */
+
+/* add/edit/delete style */
+  .bd {
+    /*background-color: #FFFFFF;*/
+  background-image:
+    color: #000000;
+    font-family: Lucida Sans Unicode, Lucida Grande, Verdana, Sans-Serif;
+    font-size: 8pt;
+  }
+  .tbl {
+    /*background-color: #FFFFFF;*/
+  }
+  a:link { 
+    background-color: #FFFFFF01;
+    color: #FF0000;
+    font-family: Lucida Sans Unicode, Lucida Grande, Verdana, Sans-Serif;
+    font-size: 8pt;
+  text-decoration:none;
+  }
+  a:active { 
+    background-color: #FFFFFF01;
+    color: #0000FF;
+    font-family: Lucida Sans Unicode, Lucida Grande, Verdana, Sans-Serif;
+    font-size: 8pt;
+  text-decoration:none;
+  }
+  a:visited { 
+    color: #800080;
+    font-family: Lucida Sans Unicode, Lucida Grande, Verdana, Sans-Serif;
+    font-size: 8pt;
+  text-decoration:none;
+  }
+  .hr {
+    background-color: #068FE6;
+    color: #FFFFFF;
+    font-family: Lucida Sans Unicode, Lucida Grande, Verdana, Sans-Serif;
+    font-size: 8pt;
+    font-weight: bold;
+  }
+  a.hr:link {
+    color: #FFFFFF;
+    font-family: Lucida Sans Unicode, Lucida Grande, Verdana, Sans-Serif;
+    font-size: 8pt;
+    font-weight: bold;
+  }
+  a.hr:active {
+    color: #FFFFFF;
+    font-family: Lucida Sans Unicode, Lucida Grande, Verdana, Sans-Serif;
+    font-size: 8pt;
+    font-weight: bold;
+  }
+  a.hr:visited {
+    color: #FFFFFF;
+    font-family: Lucida Sans Unicode, Lucida Grande, Verdana, Sans-Serif;
+    font-size: 8pt;
+    font-weight: bold;
+  }
+  .dr {
+    background-color: #FFFFFF;
+    color: #000000;
+    font-family: Lucida Sans Unicode, Lucida Grande, Verdana, Sans-Serif;
+    font-size: 8pt;
+  }
+  .sr {
+    background-color: #FFFCD9;
+    color: #000000;
+    font-family: Lucida Sans Unicode, Lucida Grande, Verdana, Sans-Serif;
+    font-size: 8pt;
+  }
+  .gr {
+    background-color: #E4E4E4;
+    color: #000000;
+    font-family: Lucida Sans Unicode, Lucida Grande, Verdana, Sans-Serif;
+    font-size: 8pt;
+  }
+
+/* add/edit/delete style end*/ 
+/* box styles */ 
+.div_box{
+padding:5px;
+width:100%;
+}
+
+/* message styles */ 
+.msg{
+color:#CD4936;
+font-weight:bold;
+}
+
+.title{
+  font-size: 1.1em;
+  font-weight: bold;
+  padding-bottom: .1em;
+}
+/* ID Card Box */
+.idcard_port{
+width:188px;
+height:280px;
+float:left;
+border:#0066CC 1px solid;
+padding:2px;
+margin-right:10px;
+}
+
+#idcard_logo{
+width:40px;
+height:40px;
+float:left;
+}
+
+.idcard_land{
+width:294px;
+height:184px;
+float:left;
+border:#0066CC 1px solid;
+padding:3px;
+margin-right:10px;
+}
+
+
+/* Image Box */
+.img_box{
+width:120px;
+height:150px;
+float:left;
+margin-right:20px;
+}
+
+/* Report Card */
+.logo_box{
+width:80px;
+height:80px;
+float:left;
+margin-right:7px;
+margin-left:5px;
+margin-bottom:2px;
+}
+
+.schhead{
+padding:5px;
+font-size:18px;
+}
+
+.headother{
+padding:5px;
+font-size:14px;
+}
+
+.image_box{
+width:115px;
+height:115px;
+float:left;
+margin-left:10px;
+}
+
+.centreedge{
+width:440px;
+float:left;
+height:auto;
+}
+
+.totalhead{
+width:710px;
+height:auto;
+}
+
+.fullhead{
+width:710px;
+height: 30px;
+}
+
+.div_head{
+width:710px;
+}
+
+.signbox{
+padding:5px;
+width:120px;
+height:60px;
+float:right;
+margin-right:20px;
+}
+/* end Report Card */
+
+#footer {
+  width: 100%;
+  border-top: 0px solid #00677a;
+  margin-top: 0px;
+  margin-left:auto;
+  margin-right:auto;
+  height:20px;
+  background-color:#608EB5;
+  line-height:18px;
+}
+
+#footer p {
+  font-size: 8pt;
+}
+
+#footer a {
+  text-decoration: none;
+}
+
+p {
+  line-height:11px;
+}
+
+
+h2, h3 {
+  font-size: 1.4em;
+  font-weight: bold;
+  padding-bottom: .1em;
+}

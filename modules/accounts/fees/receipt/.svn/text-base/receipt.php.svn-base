@@ -1,0 +1,135 @@
+<?php
+session_start();
+include_once $_SERVER['DOCUMENT_ROOT'] . '/E-shop/modules/connection.php';
+
+//get user who is logged in
+$userName=$_SESSION['userName'];
+$sql = "SELECT fullName FROM users WHERE userName='$userName'";
+$result = mysql_query($sql) or die('Cannot get Info.');
+$row4    = mysql_fetch_assoc($result);
+extract($row4);
+//generate receipt no
+$possible = '123456789BCDEFGHJKMNPQRSTVWXYZ';
+		$code = '';
+		$i = 0;
+		
+		while ($i < 5) { 
+			$code .= substr($possible, mt_rand(0, strlen($possible)-1), 1);
+			$i++;
+		}
+// get shop info
+$sql = "SELECT header_text,receipt_footer FROM config";
+$result = mysql_query($sql) or die('Cannot get Info.');
+$row    = mysql_fetch_assoc($result);
+extract($row);
+
+$sql = "SELECT sum(totalAmount) as total FROM sales WHERE status='pending'";
+$result = mysql_query($sql) or die('Cannot get Info.');
+$row2    = mysql_fetch_assoc($result);
+extract($row2);
+//get receipt details
+$sql = "SELECT sales_runtime_code FROM sales WHERE status='pending' ORDER BY salesID DESC LIMIT 1";
+$result = mysql_query($sql) or die('Cannot get Info.');
+$row5    = mysql_fetch_assoc($result);
+extract($row5);
+
+$sql = "SELECT * FROM sales WHERE status='pending' ORDER BY salesID DESC ";
+$result     = mysql_query($sql);
+//prepare receipt
+?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN" "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> E-Shop Monitor:: Receipt </title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Keywords" content="mobile applications">
+<meta name="Description" content="categories.">
+<link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="print.css" media="print" />
+<script language="Javascript">
+  <!--
+  function printpage() {
+  window.print();
+  window.location='/E-Shop/modules/receipt/index.php?view=post_receipt&receipt=YES';
+  }
+  //-->
+</script>
+</head>
+<body>
+<p>&nbsp;</p>
+ <table width="75%" border="0" align="center" cellpadding="2">
+<tr><td id="coop_title" align="center"><b><?php echo nl2br(stripslashes($header_text)); ?></b></td></tr>
+<tr><td align="center" id="content"><b>Cash Sale Receipt</td></tr>
+<tr></tr>
+<tr><td align="center" id="content"><b>Receipt No:</b><em><strong><?php echo $code; ?></strong></em></td></tr>
+<tr><td align="center" id="content"><b>Sales ID:</b><?php echo $sales_runtime_code; ?></td></tr>
+<tr><td align="center" id="content"><b>Date/Time:</b> <?php echo date('d/m/Y h:i:s a'); ?></td></tr>
+<tr></tr>
+
+<br>
+
+ <tr><td><table align="center" border="0" cellspacing="2" cellpadding="2" class="entryTable">
+  <tr id="content2" class="content" align="left"> 
+   <th width="100" align="center">Item</th>
+   <th width="250" align="center">Description</th>
+   <th width="50" align="center">Quantity</th>
+   <th width="50" align="center">Price(Ksh)</th>
+   <th width="50" align="center">Discount(KSh)</th>
+   <th width="50" align="center">Amount(KSh)</th>
+   
+ </tr>
+  <?php
+$parentId = 0;
+if (mysql_num_rows($result) > 0) {
+	$i = 0;
+	
+	while($row = mysql_fetch_assoc($result)) {
+		extract($row);
+		$i += 1;
+		
+?>
+ <tr id="content" align="center"> 
+   <td class="content" width="100" align="right"><?php echo $itemName; ?></td>
+   <td class="content" width="250" align="right"><?php echo $description; ?></td>
+   <td class="content" width="50" align="right"><?php echo $quantity; ?></td>
+   <td class="content" width="50" align="right"><?php echo $sellingPrice; ?></td>
+    <td class="content" width="50" align="right"><?php echo $discount; ?></td>
+	<td class="content" width="50" align="right"><?php echo $totalAmount; ?></td>
+  </tr>
+  <?php
+  $_SESSION['sales_runtime_code']=$sales_runtime_code;
+  $_SESSION['receiptNo']=$code;
+  $_SESSION['amount']=$totalAmount;
+
+	} // end while
+   }else {
+?>
+  <tr> 
+   <td colspan="5" align="center">No Items has been sold</td>
+  </tr>
+  <?php
+}
+?>
+<tr id="content" align="center"> 
+   <td class="content" colspan="5" align="right"><b>Total </b></td>
+ <td class="content" align="right">Ksh.<?php echo $total; ?></td>
+ </tr>  </table></td></tr>
+ <tr> </tr>
+<tr><td align="center" id="content"><b><?php echo $receipt_footer; ?></b></td></tr>
+<tr></tr>
+<tr><td height="10"></td></tr>
+<tr><td align="left" class="left_margin" id="content"><b>Customer's Signature:</b> <div class="line"></div></td></tr>
+<tr><td height="10"></td></tr>
+<tr><td align="center" id="content"><b>Served By:</b> <?php echo $fullName; ?></td></tr>
+<tr><td height="10"></td></tr>
+<tr><td align="center" id="noprint">
+		<p> 
+        <input name="save" type="button" id="save" value="Print" onclick="printpage();">
+		
+    </p>
+	</td></tr>
+</table>
+</table>
+
+</body>
+</html>
